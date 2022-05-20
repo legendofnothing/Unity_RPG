@@ -30,7 +30,7 @@ public class EnemyManager : MonoBehaviour
         eHPDisplay.text = "HP: " + currEnemyHP.ToString("0") + " / " + _maxEnemyHP.ToString("0");
 
         if (currEnemyHP <= 0) {
-            _anime.SetTrigger("isDie");
+            _anime.SetBool("isDie", true);
         }
 
         //Handle Flipping

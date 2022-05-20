@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 2035908949}
-  _yOffSet: 3
+  _yOffSet: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -221,6 +222,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352b2f8122c075044aa1ba6496aa5dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &886972402
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +728,7 @@ GameObject:
   - component: {fileID: 2035908950}
   - component: {fileID: 2035908952}
   - component: {fileID: 2035908951}
+  - component: {fileID: 2035908953}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -894,7 +908,19 @@ MonoBehaviour:
   _enemyLayer:
     serializedVersion: 2
     m_Bits: 64
-  _attack1Range: 0.8
-  _attack2Range: 0
+  _playerCamera: {fileID: 519420031}
+  _attackRange: 0.4
   _attack1Dmg: 100
-  _attack2Dmg: 0
+  _attack2Dmg: 120
+--- !u!114 &2035908953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035908945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352b2f8122c075044aa1ba6496aa5dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -18,15 +18,20 @@ public class PlayerAttack : MonoBehaviour
     [Header("Config Stuff")]
     [SerializeField] private Transform _attackPoint;
     [SerializeField] private LayerMask _enemyLayer;
+    [SerializeField] private Camera _playerCamera;
 
     [Header("Attack Config")]
-    [SerializeField] private float _attack1Range;
-    [SerializeField] private float _attack2Range;
+    [SerializeField] private float _attackRange;
     [SerializeField] private float _attack1Dmg;
     [SerializeField] private float _attack2Dmg;
 
-    //Crit Chance Stuff
-    private bool _canCrit;
+
+    //Handle Animations
+    private Animator _anime;
+
+    private void Start() {
+        _anime = GetComponent<Animator>();
+    }
 
     private void Update() {
         AttackInput();
@@ -64,7 +69,19 @@ public class PlayerAttack : MonoBehaviour
             currDelay1 = _attack1Delay;
 
             //Attack
-            Attack(_attack1Range, _attackPoint, _attack1Dmg);
+            Attack(_attackRange, _attackPoint, _attack1Dmg);
+
+            _anime.SetTrigger("isAttack2");
+        }
+
+        if (Input.GetMouseButtonDown(1) && _canAttack2) {
+            _canAttack2 = false;
+            currDelay2 = _attack2Delay;
+
+            //Attack
+            Attack(_attackRange, _attackPoint, _attack2Dmg);
+
+            _anime.SetTrigger("isAttack1");
         }
     }
 
