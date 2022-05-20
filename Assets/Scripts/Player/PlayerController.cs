@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
         //Handle Jumping
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()) {
             _player.AddForce(transform.up * _jumpPower, ForceMode2D.Impulse);
+
+            PlayerManager.instance.ReduceMana(3f);
         }
 
         //Handle Dashing
@@ -52,6 +54,8 @@ public class PlayerController : MonoBehaviour
             else if (_playerVelX < 0f) {
                 StartCoroutine(Dash(_playerVelX));
             }
+
+            PlayerManager.instance.ReduceMana(5f);
         }
 
 

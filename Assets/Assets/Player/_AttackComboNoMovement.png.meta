@@ -1,46 +1,37 @@
 fileFormatVersion: 2
-guid: b470f026374d6534b8988fe8f9148aa1
+guid: 202269e8fd701a940b0ce2e4b9a36e7d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 45966500872709769
-    second: Skeleton Walk_0
+      213: 3984948888800490918
+    second: _AttackComboNoMovement_0
   - first:
-      213: 7013577002690406627
-    second: Skeleton Walk_1
+      213: -711078728889181417
+    second: _AttackComboNoMovement_1
   - first:
-      213: -2356003859601637949
-    second: Skeleton Walk_2
+      213: 3089235579767655581
+    second: _AttackComboNoMovement_2
   - first:
-      213: 2369481524001456022
-    second: Skeleton Walk_3
+      213: 2344322803747158021
+    second: _AttackComboNoMovement_3
   - first:
-      213: -1540590527562206909
-    second: Skeleton Walk_4
+      213: -5824371925146413656
+    second: _AttackComboNoMovement_4
   - first:
-      213: -7445728037447846149
-    second: Skeleton Walk_5
+      213: -9075705633980563542
+    second: _AttackComboNoMovement_5
   - first:
-      213: 4792086390759421477
-    second: Skeleton Walk_6
+      213: -4466299568123712580
+    second: _AttackComboNoMovement_6
   - first:
-      213: -3462787873181832886
-    second: Skeleton Walk_7
+      213: 1331935041510976160
+    second: _AttackComboNoMovement_7
   - first:
-      213: 7746255393700133122
-    second: Skeleton Walk_8
+      213: 8117863399146252174
+    second: _AttackComboNoMovement_8
   - first:
-      213: 4482783208499175354
-    second: Skeleton Walk_9
-  - first:
-      213: 1513826763441915127
-    second: Skeleton Walk_10
-  - first:
-      213: -2146757507701255462
-    second: Skeleton Walk_11
-  - first:
-      213: -4988383733850832283
-    second: Skeleton Walk_12
+      213: 6818602343639179484
+    second: _AttackComboNoMovement_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -85,7 +76,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -142,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton Walk_0
+      name: _AttackComboNoMovement_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 27
         y: 0
-        width: 18
-        height: 32
+        width: 39
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 986e51cf94e43a000800000000000000
-      internalID: 45966500872709769
+      spriteID: 6a57a05b6e16d4730800000000000000
+      internalID: 3984948888800490918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Walk_1
+      name: _AttackComboNoMovement_1
       rect:
         serializedVersion: 2
-        x: 23
+        x: 159
         y: 0
-        width: 18
-        height: 32
+        width: 66
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e8e53adf1b355160800000000000000
-      internalID: 7013577002690406627
+      spriteID: 71b593dd9adb126f0800000000000000
+      internalID: -711078728889181417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Walk_2
+      name: _AttackComboNoMovement_2
       rect:
         serializedVersion: 2
-        x: 45
+        x: 281
         y: 0
-        width: 18
-        height: 32
+        width: 65
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cdbefae8facd4fd0800000000000000
-      internalID: -2356003859601637949
+      spriteID: d9c8c8f646b2fda20800000000000000
+      internalID: 3089235579767655581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Walk_3
+      name: _AttackComboNoMovement_3
       rect:
         serializedVersion: 2
-        x: 66
+        x: 401
         y: 0
-        width: 20
-        height: 33
+        width: 59
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69f35fb54e612e020800000000000000
-      internalID: 2369481524001456022
+      spriteID: 50872345b25b88020800000000000000
+      internalID: 2344322803747158021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Walk_4
+      name: _AttackComboNoMovement_4
       rect:
         serializedVersion: 2
-        x: 88
+        x: 510
         y: 0
-        width: 21
-        height: 33
+        width: 38
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 341b25cd319be9ae0800000000000000
-      internalID: -1540590527562206909
+      spriteID: 8a5d3e9c79cab2fa0800000000000000
+      internalID: -5824371925146413656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Walk_5
+      name: _AttackComboNoMovement_5
       rect:
         serializedVersion: 2
-        x: 110
+        x: 626
         y: 0
-        width: 22
-        height: 33
+        width: 42
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf631c19cc57ba890800000000000000
-      internalID: -7445728037447846149
+      spriteID: aafb390afcd9c0280800000000000000
+      internalID: -9075705633980563542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Walk_6
+      name: _AttackComboNoMovement_6
       rect:
         serializedVersion: 2
-        x: 132
+        x: 747
         y: 0
-        width: 22
-        height: 32
+        width: 77
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 526f23ece29e08240800000000000000
-      internalID: 4792086390759421477
+      spriteID: cbb618dc4348402c0800000000000000
+      internalID: -4466299568123712580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Walk_7
+      name: _AttackComboNoMovement_7
       rect:
         serializedVersion: 2
-        x: 154
+        x: 864
         y: 0
-        width: 22
-        height: 32
+        width: 64
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,20 +294,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a496776a6c4b1ffc0800000000000000
-      internalID: -3462787873181832886
+      spriteID: 0aa28250ddbfb7210800000000000000
+      internalID: 1331935041510976160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Walk_8
+      name: _AttackComboNoMovement_8
       rect:
         serializedVersion: 2
-        x: 176
+        x: 984
         y: 0
-        width: 22
-        height: 32
+        width: 46
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,20 +315,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20933f83d3a308b60800000000000000
-      internalID: 7746255393700133122
+      spriteID: e87e14150c178a070800000000000000
+      internalID: 8117863399146252174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Walk_9
+      name: _AttackComboNoMovement_9
       rect:
         serializedVersion: 2
-        x: 198
+        x: 1104
         y: 0
-        width: 22
-        height: 32
+        width: 45
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,71 +336,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abfddabc39b063e30800000000000000
-      internalID: 4482783208499175354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Walk_10
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 0
-        width: 20
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f44f66bb61320510800000000000000
-      internalID: 1513826763441915127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Walk_11
-      rect:
-        serializedVersion: 2
-        x: 244
-        y: 0
-        width: 18
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad25096bb6f2532e0800000000000000
-      internalID: -2146757507701255462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Walk_12
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 0
-        width: 17
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5620c747c63b5cab0800000000000000
-      internalID: -4988383733850832283
+      spriteID: cd0624d74ba80ae50800000000000000
+      internalID: 6818602343639179484
       vertices: []
       indices: 
       edges: []

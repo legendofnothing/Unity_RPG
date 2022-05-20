@@ -72,6 +72,8 @@ public class PlayerAttack : MonoBehaviour
             Attack(_attackRange, _attackPoint, _attack1Dmg);
 
             _anime.SetTrigger("isAttack2");
+
+            PlayerManager.instance.ReduceMana(4.8f);
         }
 
         if (Input.GetMouseButtonDown(1) && _canAttack2) {
@@ -82,6 +84,8 @@ public class PlayerAttack : MonoBehaviour
             Attack(_attackRange, _attackPoint, _attack2Dmg);
 
             _anime.SetTrigger("isAttack1");
+
+            PlayerManager.instance.ReduceMana(5.6f);
         }
     }
 

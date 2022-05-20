@@ -26,6 +26,7 @@ public class EnemyManager : MonoBehaviour
     }
 
     private void Update() {
+        
         //Display HP
         eHPDisplay.text = "HP: " + currEnemyHP.ToString("0") + " / " + _maxEnemyHP.ToString("0");
 
@@ -34,23 +35,28 @@ public class EnemyManager : MonoBehaviour
         }
 
         //Handle Flipping
-        //Somehow this work
-        _velocity = (transform.position - _lastPos) / Time.deltaTime;
-        //Lerp to avoid single frame bs
-        _velocityActual = Vector3.Lerp(_velocityActual, _velocity, 0.1f);
-        _lastPos = transform.position;
-
-        if (_velocityActual.x > 0f) {
+        if (gameObject.GetComponent<Rigidbody2D>().velocity.x > 0f) {
             transform.eulerAngles = new Vector3(0, 0, 0);
             eHPDisplay.transform.eulerAngles = new Vector3(0, 0, 0);
+            
         }
 
-        if (_velocityActual.x < 0f) {
+        else if (gameObject.GetComponent<Rigidbody2D>().velocity.x < 0f) {
             transform.eulerAngles = new Vector3(0, 180, 0);
             eHPDisplay.transform.eulerAngles = new Vector3(0, 0, 0);
+
         }
 
-        else transform.eulerAngles = transform.eulerAngles;
+        else {
+            transform.eulerAngles = transform.eulerAngles;
+        }
+
+        if (gameObject.GetComponent<Rigidbody2D>().velocity.x > 0f || gameObject.GetComponent<Rigidbody2D>().velocity.x < 0f) {
+            _anime.SetTrigger("isWalking");
+        }
+
+        else _anime.SetTrigger("isIdle");
+
     }
 
     public void DamageEnemy(float dmg) {
@@ -69,5 +75,11 @@ public class EnemyManager : MonoBehaviour
         yield return new WaitForSeconds(0.7631579f);
 
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Player")) {
+            PlayerManager.instance.TakeDamage(10f);
+        }
     }
 }
