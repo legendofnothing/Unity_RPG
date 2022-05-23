@@ -12,6 +12,17 @@ public class EnemyAttack : MonoBehaviour
     [Header("Attack Config")]
     [SerializeField] private float _minDistance;
     [SerializeField] private float _enemySpeed;
+    [SerializeField] private float _attackCooldown;
+
+    private bool _isCoolingDown;
+
+    private Rigidbody2D _rb;
+    private Rigidbody2D rb {
+        get {
+            if (!_rb) _rb = GetComponent<Rigidbody2D>();
+            return _rb;
+        }
+    }
 
     private void Start() {
         anim = this.GetComponent<Animator>();
@@ -28,8 +39,20 @@ public class EnemyAttack : MonoBehaviour
             if (distance > _minDistance) {
                 var direction = (player.position - transform.position).normalized;
 
-                gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y) * _enemySpeed;
+                rb.velocity = new Vector2(direction.x, direction.y) * _enemySpeed;
+
+                anim.SetBool("isAttacking", false);
             }
+
+            else if (_minDistance > distance) {
+                anim.SetBool("isAttacking", true);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player")) {
+            PlayerManager.instance.TakeDamage(1f);
         }
     }
 }
