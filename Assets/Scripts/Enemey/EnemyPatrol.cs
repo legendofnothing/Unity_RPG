@@ -15,7 +15,7 @@ public class EnemyPatrol : MonoBehaviour
     private float _currentDelay;
     private bool _isWaiting;
 
-    private void Update() {
+    private void FixedUpdate() {
         //Handle Delay
         //if (_isWaiting) {
         //    _currentDelay += Time.deltaTime;
@@ -50,7 +50,9 @@ public class EnemyPatrol : MonoBehaviour
         }
 
         else {
-            transform.position = Vector3.MoveTowards(transform.position, destination.position, _enemySpeed * Time.deltaTime);
+            var direction = (destination.position - transform.position).normalized;
+
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y) * _enemySpeed;
         }
     }
 
