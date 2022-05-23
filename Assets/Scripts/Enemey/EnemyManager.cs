@@ -69,6 +69,7 @@ public class EnemyManager : MonoBehaviour
         _anime.SetTrigger("isBeingHit");
     }
 
+    //Don't ask abt the numbers
     private IEnumerator Die() {
         _anime.SetTrigger("isDie");
 

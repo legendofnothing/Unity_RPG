@@ -17,15 +17,15 @@ public class EnemyPatrol : MonoBehaviour
 
     private void FixedUpdate() {
         //Handle Delay
-        //if (_isWaiting) {
-        //    _currentDelay += Time.deltaTime;
+        if (_isWaiting) {
+            _currentDelay += Time.deltaTime;
 
-        //    if (_currentDelay < _delay) {
-        //        return;
-        //    }
+            if (_currentDelay < _delay) {
+                return;
+            }
 
-        //    _isWaiting = false;
-        //}
+            _isWaiting = false;
+        }
 
         Patrol();
     }

@@ -74,6 +74,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    //Functions that will be used outside of this script
     public void ReduceMana(float mana) {
         currPlayerMN -= mana;
     }
