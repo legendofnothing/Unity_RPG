@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: f4857b99f43b0b4438d95c33c38c8d92
+guid: 678b440500e4a6444b5dc09785ca31a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2806060530409525734
-    second: B_witch_take_damage_0
+      213: 7666334394838116369
+    second: Thunder projectile1 wo blur_0
   - first:
-      213: -6812477826016509834
-    second: B_witch_take_damage_1
+      213: 4553078293868461108
+    second: Thunder projectile1 wo blur_1
   - first:
-      213: -3410013055211595750
-    second: B_witch_take_damage_2
+      213: -1012203741942079947
+    second: Thunder projectile1 wo blur_2
+  - first:
+      213: 3260714212148884173
+    second: Thunder projectile1 wo blur_3
+  - first:
+      213: -1711625435418426776
+    second: Thunder projectile1 wo blur_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: B_witch_take_damage_0
+      name: Thunder projectile1 wo blur_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 102
-        width: 20
-        height: 37
+        x: 3
+        y: 11
+        width: 27
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,41 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e1dd4d6f2121f620800000000000000
-      internalID: 2806060530409525734
+      spriteID: 1186fad938a446a60800000000000000
+      internalID: 7666334394838116369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: B_witch_take_damage_1
+      name: Thunder projectile1 wo blur_1
       rect:
         serializedVersion: 2
-        x: 6
-        y: 54
-        width: 21
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6708f04e2873571a0800000000000000
-      internalID: -6812477826016509834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_take_damage_2
-      rect:
-        serializedVersion: 2
-        x: 6
+        x: 35
         y: 6
-        width: 19
-        height: 37
+        width: 26
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,8 +153,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a181bac71333da0d0800000000000000
-      internalID: -3410013055211595750
+      spriteID: 43c3294c598cf2f30800000000000000
+      internalID: 4553078293868461108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder projectile1 wo blur_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 6
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e98314f0ee3f1f0800000000000000
+      internalID: -1012203741942079947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder projectile1 wo blur_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 6
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2b339cc42604d20800000000000000
+      internalID: 3260714212148884173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder projectile1 wo blur_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 6
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8628c5d2cb51f38e0800000000000000
+      internalID: -1711625435418426776
       vertices: []
       indices: 
       edges: []

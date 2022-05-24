@@ -21,7 +21,7 @@ public class PlayerManager : MonoBehaviour
     public int pickupHP;
     public int pickupMN;
     
-    private Animator _anime;
+    private Animator _anim;
 
     //Singleton Stuff
     private void Awake() {
@@ -40,7 +40,7 @@ public class PlayerManager : MonoBehaviour
 
         StartCoroutine(GeneratingMana());
 
-        _anime = GetComponent<Animator>();
+        _anim = GetComponent<Animator>();
     }
 
     private void Update() {
@@ -85,5 +85,7 @@ public class PlayerManager : MonoBehaviour
 
     public void TakeDamage(float dmg) {
         currPlayerHP -= dmg;
+
+        _anim.SetTrigger("TakeDamage");
     }
 }

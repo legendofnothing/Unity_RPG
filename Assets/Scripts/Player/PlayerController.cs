@@ -57,8 +57,6 @@ public class PlayerController : MonoBehaviour
 
             PlayerManager.instance.ReduceMana(5f);
         }
-
-
     }
 
     //Handle the Physics

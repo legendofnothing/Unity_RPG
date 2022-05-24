@@ -1,46 +1,43 @@
 fileFormatVersion: 2
-guid: c4bd4061bd3c6614b85b5fb86f2708de
+guid: b4d5f439aadc2f7438eed7430d95bcd4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6051900934413649582
-    second: B_witch_charge_0
+      213: 7548742475732107364
+    second: Firebolt SpriteSheet_0
   - first:
-      213: -8699970382033142276
-    second: B_witch_charge_1
+      213: 306219143863640384
+    second: Firebolt SpriteSheet_1
   - first:
-      213: -4661947401955712466
-    second: B_witch_charge_2
+      213: -3744757891071147524
+    second: Firebolt SpriteSheet_2
   - first:
-      213: -8150979072369005061
-    second: B_witch_charge_3
+      213: -3884485359023492735
+    second: Firebolt SpriteSheet_3
   - first:
-      213: 9102356174468631350
-    second: B_witch_charge_4
+      213: -8344620753644177729
+    second: Firebolt SpriteSheet_4
   - first:
-      213: -5154235312219339718
-    second: B_witch_charge_5
+      213: 8752090258065097107
+    second: Firebolt SpriteSheet_5
   - first:
-      213: 2792587887544213240
-    second: B_witch_charge_6
+      213: 1847394199649331469
+    second: Firebolt SpriteSheet_6
   - first:
-      213: -3840996947518145699
-    second: B_witch_charge_7
+      213: -9026615604156508812
+    second: Firebolt SpriteSheet_7
   - first:
-      213: -2299175191877236700
-    second: B_witch_charge_8
+      213: 8965878915032480692
+    second: Firebolt SpriteSheet_8
   - first:
-      213: -8110604173583913133
-    second: B_witch_charge_9
+      213: -9211971603802564175
+    second: Firebolt SpriteSheet_9
   - first:
-      213: -3757569096154584718
-    second: B_witch_charge_10
+      213: 4274796765636291823
+    second: Firebolt SpriteSheet_10
   - first:
-      213: 5909739891886410493
-    second: B_witch_charge_11
-  - first:
-      213: 2926091904789295261
-    second: B_witch_charge_12
+      213: -3979185046042636639
+    second: Firebolt SpriteSheet_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,274 +139,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: B_witch_charge_0
+      name: Firebolt SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 188
-        width: 34
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2597b6c1a24530ca0800000000000000
-      internalID: -6051900934413649582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_1
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 139
-        width: 32
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfdbe7e280f734780800000000000000
-      internalID: -8699970382033142276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_2
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 166
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e22efd8b98f6d4fb0800000000000000
-      internalID: -4661947401955712466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_3
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 135
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfd6dcb28b7e1ee80800000000000000
-      internalID: -8150979072369005061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_4
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 97
-        width: 33
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63b494ed6b0125e70800000000000000
-      internalID: 9102356174468631350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_5
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 130
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a344466ba4a7878b0800000000000000
-      internalID: -5154235312219339718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_6
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 118
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fe912153e341c620800000000000000
-      internalID: 2792587887544213240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_7
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 91
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5b32df60a902bac0800000000000000
-      internalID: -3840996947518145699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_8
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 87
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42844c33850b710e0800000000000000
-      internalID: -2299175191877236700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_9
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 81
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35feab7d978517f80800000000000000
-      internalID: -8110604173583913133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_10
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 39
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27968b4c0de6adbc0800000000000000
-      internalID: -3757569096154584718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_11
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 66
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dfa48dade1d930250800000000000000
-      internalID: 5909739891886410493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_charge_12
-      rect:
-        serializedVersion: 2
-        x: 4
+        x: 258
         y: 1
-        width: 37
+        width: 27
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d90bc1595119b9820800000000000000
-      internalID: 2926091904789295261
+      spriteID: 4604ae6694582c860800000000000000
+      internalID: 7548742475732107364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firebolt SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041aa6d50b8ef3400800000000000000
+      internalID: 306219143863640384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firebolt SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf10dd4e982f70cc0800000000000000
+      internalID: -3744757891071147524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firebolt SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 27
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181f2389529871ac0800000000000000
+      internalID: -3884485359023492735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firebolt SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 5
+        width: 110
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6bfa1e2a3f13c80800000000000000
+      internalID: -8344620753644177729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firebolt SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 12
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391802a18bba57970800000000000000
+      internalID: 8752090258065097107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firebolt SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 13
+        width: 35
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0927369c3343a910800000000000000
+      internalID: 1847394199649331469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firebolt SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 13
+        width: 38
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475d04edee40bb280800000000000000
+      internalID: -9026615604156508812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firebolt SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 12
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbfca5be533d6c70800000000000000
+      internalID: 8965878915032480692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firebolt SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 22
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9dc5a22a0882080800000000000000
+      internalID: -9211971603802564175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firebolt SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 17
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae0513884817c8c0800000000000000
+      internalID: -3979185046042636639
       vertices: []
       indices: 
       edges: []
