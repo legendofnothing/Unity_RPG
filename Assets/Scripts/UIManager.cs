@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class UIManager : MonoBehaviour
     public Image waterSpell;
     public Image iceSpell;
     public Image thunderSpell;
+
+    [Space]
+    //Handle Display Items
+    public TextMeshProUGUI hpItem;
+    public TextMeshProUGUI mnItem;
 
     List<Image> spellList;
 
@@ -47,6 +53,10 @@ public class UIManager : MonoBehaviour
                 SetSpell(thunderSpell);
                 break;
         }
+
+        //Handle counting items
+        hpItem.text = "x" + PlayerManager.instance.pickupHP.ToString();
+        mnItem.text = "x" + PlayerManager.instance.pickupMN.ToString();
     }
 
     private void SetSpell(Image spells) {

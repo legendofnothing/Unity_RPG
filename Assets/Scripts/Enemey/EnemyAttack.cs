@@ -52,7 +52,7 @@ public class EnemyAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Player")) {
-            PlayerManager.instance.TakeDamage(1f);
+            PlayerManager.instance.TakeDamage(2f);
         }
     }
 }

@@ -17,18 +17,12 @@ public class Pickups : MonoBehaviour
         if (collision.tag == "Player") {
             switch (pickUpIndex) {
                 case 0:
-                    if (PlayerManager.instance.currPlayerHP < 100) {
-                        PlayerManager.instance.currPlayerHP += _hpAdd;
-
-                        Destroy(gameObject);
-                    }
+                    PlayerManager.instance.pickupHP += 1;
+                    Destroy(gameObject);
                     break;
                 case 1:
-                    if (PlayerManager.instance.currPlayerMN < 100) {
-                        PlayerManager.instance.currPlayerMN += _mnAdd;
-
-                        Destroy(gameObject);
-                    }
+                    PlayerManager.instance.pickupMN += 1;
+                    Destroy(gameObject);
                     break;
                 default:
                     Debug.Log("Check pickup index at: " + gameObject.name);
