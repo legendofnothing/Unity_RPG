@@ -25,13 +25,13 @@ public class PlayerController : MonoBehaviour
     [Header("Misc")]
     [SerializeField] private LayerMask _groundLayer;
 
-    //Handle Animations
-    private Animator _anime;
+    //Animation Stuff
+    private Animator _anim;
 
     private void Start() {
         _player = GetComponent<Rigidbody2D>();
 
-        _anime = this.GetComponent<Animator>();
+        _anim = GetComponent<Animator>();
     }
 
     //Jumping, Dashing, Switching Weapons are Handled Seperately from FixedUpdate since it needs to be check constantly
@@ -85,22 +85,11 @@ public class PlayerController : MonoBehaviour
         }
 
         //Handle Animation
-        if (!IsGrounded()) {
-            _anime.SetInteger("States", 2);
+        if(_playerVelX != 0) {
+            _anim.SetInteger("PlayerState", 1);
         }
 
-        else if (_isDashing) {
-            _anime.SetInteger("States", 3);
-        }
-
-        else if(_playerVelX > 0 || _playerVelX < 0) {
-            _anime.SetInteger("States", 1);
-        }
-
-        else
-            _anime.SetInteger("States", 0);
-
-        _anime.SetBool("isDashingAnimation", _isDashing);
+        else _anim.SetInteger("PlayerState", 0);
     }
 
     //Coroutine for dashing

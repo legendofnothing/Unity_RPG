@@ -17,6 +17,10 @@ public class PlayerManager : MonoBehaviour
     public float maxPlayerMN;
     [HideInInspector] public bool canGenerate;
 
+    //HP, MN Consumables
+    public int pickupHP;
+    public int pickupMN;
+    
     private Animator _anime;
 
     //Singleton Stuff
@@ -81,6 +85,5 @@ public class PlayerManager : MonoBehaviour
 
     public void TakeDamage(float dmg) {
         currPlayerHP -= dmg;
-        _anime.SetTrigger("isHit");
     }
 }
