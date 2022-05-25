@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Misc")]
     [SerializeField] private LayerMask _groundLayer;
+    [SerializeField] private float _hpFill;
+    [SerializeField] private float _mnFill;
 
     //Animation Stuff
     private Animator _anim;
@@ -56,6 +58,19 @@ public class PlayerController : MonoBehaviour
             }
 
             PlayerManager.instance.ReduceMana(5f);
+        }
+
+        //Handle Consumables
+        if(Input.GetKeyDown(KeyCode.Z) && PlayerManager.instance.pickupHP > 0 && PlayerManager.instance.currPlayerHP < PlayerManager.instance.maxPlayerHP) {
+            PlayerManager.instance.currPlayerHP += _hpFill;
+
+            PlayerManager.instance.pickupHP -= 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.X) && PlayerManager.instance.pickupMN > 0 && PlayerManager.instance.currPlayerMN < PlayerManager.instance.maxPlayerMN) {
+            PlayerManager.instance.currPlayerMN += _mnFill;
+
+            PlayerManager.instance.pickupMN -= 1;
         }
     }
 

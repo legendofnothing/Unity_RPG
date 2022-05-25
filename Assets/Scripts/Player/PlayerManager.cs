@@ -18,8 +18,8 @@ public class PlayerManager : MonoBehaviour
     [HideInInspector] public bool canGenerate;
 
     //HP, MN Consumables
-    public int pickupHP;
-    public int pickupMN;
+    [HideInInspector] public int pickupHP;
+    [HideInInspector] public int pickupMN;
     
     private Animator _anim;
 
@@ -61,13 +61,12 @@ public class PlayerManager : MonoBehaviour
         if (currPlayerMN <= 0) {
             currPlayerMN = 0;
         }
-
     }
 
     //Generate x ammount of Mana / s, set in attacks sets.
     private IEnumerator GeneratingMana() {
         while (true) {
-            if (currPlayerMN < 100) {
+            if (currPlayerMN < maxPlayerMN) {
                 currPlayerMN += 2.8f;
                 yield return new WaitForSeconds(1f);
             }
