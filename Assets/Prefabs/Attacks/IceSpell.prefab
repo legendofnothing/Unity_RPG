@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: -3201482924087459850}
   - component: {fileID: 6011102397947761423}
   - component: {fileID: 2348934179818019679}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: IceSpell
-  m_TagString: Untagged
+  m_TagString: Spells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

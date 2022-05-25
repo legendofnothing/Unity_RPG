@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1633811605926360583}
   - component: {fileID: 7377649985607169049}
   - component: {fileID: 3187086119363826460}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ThunderSpell
-  m_TagString: Untagged
+  m_TagString: Spells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

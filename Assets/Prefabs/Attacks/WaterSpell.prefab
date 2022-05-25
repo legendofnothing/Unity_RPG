@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2228500180853285620}
   - component: {fileID: 3982985601191445003}
   - component: {fileID: 2245293712968893044}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WaterSpell
-  m_TagString: Untagged
+  m_TagString: Spells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
