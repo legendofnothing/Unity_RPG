@@ -73,7 +73,7 @@ public class PlayerAttack : MonoBehaviour {
 
     private void AttackInput() {
 
-        if (Input.GetMouseButtonDown(0) && _canAttack && PlayerManager.instance.currPlayerMN > 0) {
+        if (Input.GetMouseButtonDown(0) && _canAttack && PlayerManager.instance.currPlayerMN > 0 && CanCastSpell()) {
             currDelay = attackDelay;
             _canAttack = false;
 
@@ -124,5 +124,25 @@ public class PlayerAttack : MonoBehaviour {
 
         GameObject spellInstance = Instantiate(spelltocast, attackPoint.transform.position, attackPoint.transform.rotation);
         spellInstance.GetComponent<Rigidbody2D>().velocity = attackPoint.transform.right * projectileSpeed;
+    }
+
+    private bool CanCastSpell() {
+        if (PlayerManager.instance.currPlayerMN - fireMana <= 0) {
+            return false;
+        }
+
+        else if (PlayerManager.instance.currPlayerMN - iceMana <= 0) {
+            return false;
+        }
+
+        else if (PlayerManager.instance.currPlayerMN - waterMana <= 0) {
+            return false;
+        }
+
+        else if (PlayerManager.instance.currPlayerMN - thunderMana <= 0) {
+            return false;
+        }
+
+        else return true;
     }
 }

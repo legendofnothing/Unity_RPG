@@ -6,16 +6,11 @@ using TMPro;
 public class EnemyManager : MonoBehaviour
 {
     //HP Display
-    public TextMeshPro eHPDisplay;
+    public GameObject eHPDisplay;
 
     //HP Stuff
     [HideInInspector] public float currEnemyHP;
     [SerializeField] private float _maxEnemyHP;
-
-    //Handle Flipping Stuff
-    private Vector3 _lastPos;
-    private Vector3 _velocity;
-    private Vector3 _velocityActual;
 
     //Animation Stuff
     private Animator _anime;
@@ -28,10 +23,11 @@ public class EnemyManager : MonoBehaviour
     private void Update() {
         
         //Display HP
-        eHPDisplay.text = "HP: " + currEnemyHP.ToString("0") + " / " + _maxEnemyHP.ToString("0");
+        eHPDisplay.GetComponent<TextMesh>().text = "HP: " + currEnemyHP.ToString("0") + " / " + _maxEnemyHP.ToString("0");
 
         if (currEnemyHP <= 0) {
             _anime.SetBool("isDie", true);
+            currEnemyHP = 0;
         }
 
         //Handle Flipping
@@ -69,14 +65,6 @@ public class EnemyManager : MonoBehaviour
         _anime.SetTrigger("isBeingHit");
     }
 
-    //Don't ask abt the numbers
-    private IEnumerator Die() {
-        _anime.SetTrigger("isDie");
-
-        yield return new WaitForSeconds(0.7631579f);
-
-        Destroy(gameObject);
-    }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Player")) {
