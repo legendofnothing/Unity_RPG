@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 6
-  _jumpPower: 8
+  _jumpPower: 9
   _dashingDuration: 0.4
   _dashingRange: 6
   _dashingDelay: 0.4
@@ -156,7 +156,7 @@ MonoBehaviour:
   currPlayerHP: 0
   maxPlayerHP: 80
   currPlayerMN: 0
-  maxPlayerMN: 220
+  maxPlayerMN: 300
   canGenerate: 0
   pickupHP: 0
   pickupMN: 0
