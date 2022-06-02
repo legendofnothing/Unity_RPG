@@ -181,10 +181,10 @@ MonoBehaviour:
   waterSpeed: 4
   iceSpeed: 9
   thunderSpeed: 15
-  fireMana: 20
-  waterMana: 40
-  iceMana: 25
-  thunderMana: 15
+  fireMana: 15
+  waterMana: 30
+  iceMana: 20
+  thunderMana: 10
   attackDelay: 1.2
   currDelay: 0
   attackPoint: {fileID: 526582165811147246}
