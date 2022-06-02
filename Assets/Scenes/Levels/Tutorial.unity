@@ -7427,6 +7427,7 @@ MonoBehaviour:
   eHPDisplay: {fileID: 827033033}
   currEnemyHP: 0
   _maxEnemyHP: 50
+  canPatrol: 0
 --- !u!61 &908372660
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20047,6 +20048,7 @@ MonoBehaviour:
   eHPDisplay: {fileID: 2114970385}
   currEnemyHP: 0
   _maxEnemyHP: 50
+  canPatrol: 0
 --- !u!61 &1589189369
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20636,6 +20638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 6660080119544331870, guid: 2d85b7b34b72c5e43b4937aa30414b45, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1880779310}
     - target: {fileID: 6660080120771047310, guid: 2d85b7b34b72c5e43b4937aa30414b45, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -23475,6 +23481,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 526582166501781428, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}
   m_PrefabInstance: {fileID: 1880779308}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1880779310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 526582166501781434, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}
+  m_PrefabInstance: {fileID: 1880779308}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1897544410
 GameObject:
   m_ObjectHideFlags: 0
@@ -25947,6 +25958,7 @@ MonoBehaviour:
   eHPDisplay: {fileID: 1464732696}
   currEnemyHP: 0
   _maxEnemyHP: 50
+  canPatrol: 0
 --- !u!61 &2143115469
 BoxCollider2D:
   m_ObjectHideFlags: 0

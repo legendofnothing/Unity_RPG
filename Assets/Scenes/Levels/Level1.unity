@@ -7293,6 +7293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPatrol (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3062037544575950460, guid: 16ce8df6dcabb674b93dcfbf56fa103e, type: 3}
+      propertyPath: _maxEnemyHP
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3062037544575950461, guid: 16ce8df6dcabb674b93dcfbf56fa103e, type: 3}
       propertyPath: _enemySpeed
       value: 1.8

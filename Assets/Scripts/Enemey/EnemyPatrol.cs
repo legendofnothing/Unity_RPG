@@ -27,7 +27,9 @@ public class EnemyPatrol : MonoBehaviour
             _isWaiting = false;
         }
 
-        Patrol();
+        if (gameObject.GetComponent<EnemyManager>().canPatrol) {
+            Patrol();
+        }
     }
 
     private void Patrol() {

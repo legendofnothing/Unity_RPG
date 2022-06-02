@@ -15,20 +15,22 @@ public class EnemyManager : MonoBehaviour
     //Animation Stuff
     private Animator _anime;
 
+    //State
+    [HideInInspector] public bool canPatrol;
+
+    //Variable that make stuff play once
+    private bool _isDone;
+
     private void Start() {
         currEnemyHP = _maxEnemyHP;
         _anime = this.GetComponent<Animator>();
+        canPatrol = true;
     }
 
     private void Update() {
         
         //Display HP
         eHPDisplay.GetComponent<TextMesh>().text = "HP: " + currEnemyHP.ToString("0") + " / " + _maxEnemyHP.ToString("0");
-
-        if (currEnemyHP <= 0) {
-            _anime.SetBool("isDie", true);
-            currEnemyHP = 0;
-        }
 
         //Handle Flipping
         if (gameObject.GetComponent<Rigidbody2D>().velocity.x > 0f) {
@@ -52,6 +54,16 @@ public class EnemyManager : MonoBehaviour
         }
 
         else _anime.SetTrigger("isIdle");
+
+        if (currEnemyHP <= 0) {
+            currEnemyHP = 0;
+            canPatrol = false;
+
+            if (!_isDone) {
+                _anime.SetTrigger("isDie");
+                _isDone = true;
+            }
+        }
 
     }
 
