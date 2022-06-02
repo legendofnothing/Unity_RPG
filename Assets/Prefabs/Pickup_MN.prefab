@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpIndex: 1
   _hpAdd: 20
-  _mnAdd: 50
+  _mnAdd: 220
 --- !u!61 &1316143188013566871
 BoxCollider2D:
   m_ObjectHideFlags: 0
