@@ -13,16 +13,16 @@ public class MovingPlatform : MonoBehaviour
 
     private void Update() {
         if (_isActivated) {
-            _isPressed = false;
+            if (!_isPressed) {
+                if (Input.GetKeyDown(KeyCode.A)) {
+                    StartCoroutine(MovePlatform(Vector2.left, speed * 10));
+                    _isPressed = true;
+                }
 
-            if (Input.GetKeyDown(KeyCode.A) && _isPressed == false) {
-                StartCoroutine(MovePlatform(Vector2.left, speed*10));
-                _isPressed = true;
-            }
-
-            if (Input.GetKeyDown(KeyCode.D) && _isPressed == false) {
-                StartCoroutine(MovePlatform(Vector2.right, speed*10));
-                _isPressed = true;
+                else if (Input.GetKeyDown(KeyCode.D)) {
+                    StartCoroutine(MovePlatform(Vector2.right, speed * 10));
+                    _isPressed = true;
+                }
             }
         }
     }
@@ -30,6 +30,18 @@ public class MovingPlatform : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.GetComponent<WeaponIndex>().weaponIndex == weaponIndexHit && !_isMoving) {
             _isActivated = true;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision) {
+        if(collision.gameObject.tag == "Player") {
+            collision.gameObject.transform.SetParent(gameObject.transform, true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Player") {
+            collision.gameObject.transform.parent = null;
         }
     }
 
@@ -44,6 +56,7 @@ public class MovingPlatform : MonoBehaviour
 
         _isMoving = false;
         _isActivated = false;
+        _isPressed = false;
     }
 }
 
