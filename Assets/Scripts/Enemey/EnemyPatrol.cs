@@ -10,23 +10,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private int _currentWaypointIndex;
 
-    //Handle Delay when moving between points
-    private float _delay = 0.2f;
-    private float _currentDelay;
-    private bool _isWaiting;
-
     private void FixedUpdate() {
-        //Handle Delay
-        if (_isWaiting) {
-            _currentDelay += Time.deltaTime;
-
-            if (_currentDelay < _delay) {
-                return;
-            }
-
-            _isWaiting = false;
-        }
-
         if (gameObject.GetComponent<EnemyManager>().canPatrol) {
             Patrol();
         }
@@ -46,9 +30,6 @@ public class EnemyPatrol : MonoBehaviour
         //Threshold to change is 0.2 cuz floats cant be absolute 0 anyways
         if (Vector3.Distance(transform.position, destination.position) < 0.2f) {
             _currentWaypointIndex = (_currentWaypointIndex + 1) % _wayPoints.Length;
-
-            _currentDelay = 0f;
-            _isWaiting = true;
         }
 
         else {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1089283775312856691}
   - component: {fileID: -3201482924087459850}
   - component: {fileID: 6011102397947761423}
+  - component: {fileID: 8912042825186510846}
   - component: {fileID: 2348934179818019679}
   m_Layer: 7
   m_Name: IceSpell
@@ -152,6 +153,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8912042825186510846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634119235047753242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cbb17dfc4ee99429bb6732725daf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponIndex: 2
 --- !u!114 &2348934179818019679
 MonoBehaviour:
   m_ObjectHideFlags: 0
