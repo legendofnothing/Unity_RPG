@@ -163,11 +163,10 @@ GameObject:
   - component: {fileID: 7307298241579154216}
   - component: {fileID: 7307298241579154217}
   - component: {fileID: 7307298241579154222}
-  - component: {fileID: 7307298241579154219}
+  - component: {fileID: 7307298241579154218}
   - component: {fileID: 7307298241579154223}
   - component: {fileID: 7307298241579154220}
   - component: {fileID: 7307298241579154221}
-  - component: {fileID: 7307298241579154218}
   m_Layer: 6
   m_Name: EnemyChase
   m_TagString: Untagged
@@ -258,7 +257,7 @@ MonoBehaviour:
   currEnemyHP: 0
   _maxEnemyHP: 200
   canPatrol: 0
---- !u!114 &7307298241579154219
+--- !u!114 &7307298241579154218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,13 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69d342fdb37d3248b26df963c3bb838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 8
   player: {fileID: 0}
-  _minDistance: 3
-  _enemySpeed: 2
-  _attackCooldown: 0
+  distanceToMove: 0
 --- !u!50 &7307298241579154223
 Rigidbody2D:
   serializedVersion: 4
@@ -343,22 +337,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7307298241579154218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307298241579154210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b69d342fdb37d3248b26df963c3bb838, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  player: {fileID: 0}
-  _minDistance: 1.2
-  _enemySpeed: 1
-  _attackCooldown: 0
