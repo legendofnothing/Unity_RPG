@@ -15,6 +15,7 @@ public class BossBehaviour : MonoBehaviour
         }
 
         else if (!_canAttack) {
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             StartCoroutine(DelayAttack());
         }
     }
