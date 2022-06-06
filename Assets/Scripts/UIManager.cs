@@ -110,7 +110,5 @@ public class UIManager : MonoBehaviour
     public void Retry() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-
     #endregion
 }
