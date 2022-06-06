@@ -140,7 +140,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 119
   _hpFill: 20
-  _mnFill: 60
+  _mnFill: 150
 --- !u!114 &526582166501781427
 MonoBehaviour:
   m_ObjectHideFlags: 0

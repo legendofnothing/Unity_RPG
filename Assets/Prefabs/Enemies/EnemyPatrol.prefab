@@ -89,7 +89,7 @@ TextMesh:
   m_Alignment: 1
   m_TabSize: 5
   m_FontSize: 30
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: a160e728c2634d0488b2f0f27eb3f9bd, type: 3}
   m_Color:
@@ -198,6 +198,7 @@ MonoBehaviour:
   eHPDisplay: {fileID: 788470627218333106}
   currEnemyHP: 0
   _maxEnemyHP: 50
+  canPatrol: 0
 --- !u!114 &3062037544575950461
 MonoBehaviour:
   m_ObjectHideFlags: 0

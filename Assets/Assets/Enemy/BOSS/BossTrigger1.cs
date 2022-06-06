@@ -22,6 +22,8 @@ public class BossTrigger1 : MonoBehaviour
             }
 
             Boss.SetActive(true);
+
+            Destroy(gameObject);
         }
     }
 }
