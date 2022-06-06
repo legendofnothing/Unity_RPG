@@ -27672,8 +27672,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1315202509}
     - target: {fileID: 6660080119544331870, guid: 2d85b7b34b72c5e43b4937aa30414b45, type: 3}
+      propertyPath: hints.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660080119544331870, guid: 2d85b7b34b72c5e43b4937aa30414b45, type: 3}
       propertyPath: hintText.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660080119544331870, guid: 2d85b7b34b72c5e43b4937aa30414b45, type: 3}
+      propertyPath: hints.Array.data[7]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6660080119544331870, guid: 2d85b7b34b72c5e43b4937aa30414b45, type: 3}
       propertyPath: hintText.Array.data[4]
