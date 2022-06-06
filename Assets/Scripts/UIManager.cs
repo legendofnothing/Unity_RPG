@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public GameObject playUI;
+    public GameObject deathUI;
+
+    #region PlayUI
+
     //Handle HP Bar
     public GameObject HealthBar;
     public GameObject ManaBar;
@@ -23,10 +29,16 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI hpItem;
     public TextMeshProUGUI mnItem;
 
+    [Space]
+    public AnimationClip playerDieClip;
+    public GameObject[] Buttons;
+ 
     List<Image> spellList;
 
     private void Start() {
         spellList = new List<Image> { fireSpell, waterSpell, iceSpell, thunderSpell };
+        deathUI.SetActive(false);
+        Time.timeScale = 1;
     }
 
     private void Update() {
@@ -57,6 +69,12 @@ public class UIManager : MonoBehaviour
         //Handle counting items
         hpItem.text = "x" + PlayerManager.instance.pickupHP.ToString();
         mnItem.text = "x" + PlayerManager.instance.pickupMN.ToString();
+
+        if(PlayerManager.instance.currPlayerHP <= 0) {
+            playUI.SetActive(false);
+
+            StartCoroutine(InitDeathUI());
+        }
     }
 
     private void SetSpell(Image spells) {
@@ -68,4 +86,31 @@ public class UIManager : MonoBehaviour
             else spellList[i].color = new Color(spellList[i].color.r, spellList[i].color.g, spellList[i].color.b, 0.5f);
         }
     }
+
+    IEnumerator InitDeathUI() {
+        yield return new WaitForSeconds(playerDieClip.length);
+        deathUI.SetActive(true);
+
+        //Set Buttons to false on first on DeathUI
+        for (int i = 0; i < Buttons.Length; i++) {
+            Buttons[i].SetActive(false);
+        }
+
+        yield return new WaitForSeconds(1.5f);
+
+        //Then enable the buttons
+
+        for (int i = 0; i < Buttons.Length; i++) {
+            yield return new WaitForSeconds(1f);
+
+            Buttons[i].SetActive(true);
+        }
+    }
+
+    public void Retry() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
+    #endregion
 }

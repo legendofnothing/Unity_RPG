@@ -23,6 +23,8 @@ public class PlayerManager : MonoBehaviour
     
     private Animator _anim;
 
+    private bool _isDone = false;
+
     //Singleton Stuff
     private void Awake() {
 
@@ -56,6 +58,15 @@ public class PlayerManager : MonoBehaviour
 
         if (currPlayerHP <= 0) {
             currPlayerHP = 0;
+
+            gameObject.GetComponent<PlayerController>().enabled = false;
+            gameObject.GetComponent<PlayerAttack>().enabled = false;
+
+
+            if (!_isDone) {
+                _anim.SetTrigger("Die");
+                _isDone = true;
+            }
         }
 
         if (currPlayerMN <= 0) {
