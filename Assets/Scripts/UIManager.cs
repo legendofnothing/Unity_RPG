@@ -7,11 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    private bool isPausing;
+
     public GameObject playUI;
     public GameObject deathUI;
+    public GameObject pauseUI;
 
     #region PlayUI
 
+    [Space]
     //Handle HP Bar
     public GameObject HealthBar;
     public GameObject ManaBar;
@@ -32,13 +36,20 @@ public class UIManager : MonoBehaviour
     [Space]
     public AnimationClip playerDieClip;
     public GameObject[] Buttons;
- 
+
+    [Space]
+    //This is for fun
+    public Text hintText;
+    public string[] hints;
+
     List<Image> spellList;
 
     private void Start() {
         spellList = new List<Image> { fireSpell, waterSpell, iceSpell, thunderSpell };
-        deathUI.SetActive(false);
         Time.timeScale = 1;
+
+        deathUI.SetActive(false);
+        pauseUI.SetActive(false);
     }
 
     private void Update() {
@@ -70,10 +81,32 @@ public class UIManager : MonoBehaviour
         hpItem.text = "x" + PlayerManager.instance.pickupHP.ToString();
         mnItem.text = "x" + PlayerManager.instance.pickupMN.ToString();
 
+        //Handle Death Screen
         if(PlayerManager.instance.currPlayerHP <= 0) {
             playUI.SetActive(false);
+            deathUI.SetActive(true);
+        }
 
-            StartCoroutine(InitDeathUI());
+        //Handle Pausing
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPausing) {
+            playUI.SetActive(false);
+            pauseUI.SetActive(true);
+
+            Time.timeScale = 0;
+
+            isPausing = true;
+
+            var hintIndex = Random.Range(0, hints.Length);
+            hintText.text = hints[hintIndex];
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPausing) {
+            playUI.SetActive(true);
+            pauseUI.SetActive(false);
+
+            Time.timeScale = 1;
+
+            isPausing = false;
         }
     }
 
@@ -90,25 +123,23 @@ public class UIManager : MonoBehaviour
     IEnumerator InitDeathUI() {
         yield return new WaitForSeconds(playerDieClip.length);
         deathUI.SetActive(true);
-
-        //Set Buttons to false on first on DeathUI
-        for (int i = 0; i < Buttons.Length; i++) {
-            Buttons[i].SetActive(false);
-        }
-
-        yield return new WaitForSeconds(1.5f);
-
-        //Then enable the buttons
-
-        for (int i = 0; i < Buttons.Length; i++) {
-            yield return new WaitForSeconds(1f);
-
-            Buttons[i].SetActive(true);
-        }
     }
 
     public void Retry() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Quit() {
+        //Do Code Here
+    }
+
+    public void Continue() {
+        playUI.SetActive(true);
+        pauseUI.SetActive(false);
+
+        Time.timeScale = 1;
+
+        isPausing = false;
     }
     #endregion
 }

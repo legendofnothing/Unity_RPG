@@ -47,7 +47,7 @@ public class BossBehaviour : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && PlayerManager.instance.currPlayerHP > 0) {
             PlayerManager.instance.TakeDamage(20f);
         }
 
