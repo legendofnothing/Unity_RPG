@@ -30,8 +30,8 @@ public class UIManager : MonoBehaviour
 
     [Space]
     //Handle Display Items
-    public TextMeshProUGUI hpItem;
-    public TextMeshProUGUI mnItem;
+    public Text hpItem;
+    public Text mnItem;
 
     [Space]
     public AnimationClip playerDieClip;
