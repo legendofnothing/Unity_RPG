@@ -28,7 +28,7 @@ public class MovingPlatform : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.GetComponent<WeaponIndex>().weaponIndex == weaponIndexHit && !_isMoving) {
+        if (collision.gameObject.GetComponent<AttackManager>().weaponIndex == weaponIndexHit && !_isMoving) {
             _isActivated = true;
         }
     }

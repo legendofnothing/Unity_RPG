@@ -39354,11 +39354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 526582166501781428, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 526582166501781428, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 526582166501781428, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39395,6 +39395,22 @@ PrefabInstance:
     - target: {fileID: 526582166501781434, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865557583574438876, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}
+      propertyPath: attackCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302412187117729926, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}
+      propertyPath: attackCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661222018854240469, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}
+      propertyPath: attackCooldown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605413182471569581, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}
+      propertyPath: attackCooldown
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79239397a6cb5364d89c4dae920d7e77, type: 3}

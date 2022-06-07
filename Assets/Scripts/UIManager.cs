@@ -44,6 +44,13 @@ public class UIManager : MonoBehaviour
 
     List<Image> spellList;
 
+    [Space]
+    //Make sure this is in order im too lazy to fix it
+    public Text[] spellCDs;
+
+    [Space]
+    public GameObject lowManaText;
+
     private void Start() {
         spellList = new List<Image> { fireSpell, waterSpell, iceSpell, thunderSpell };
         Time.timeScale = 1;
@@ -108,6 +115,19 @@ public class UIManager : MonoBehaviour
 
             isPausing = false;
         }
+
+        //Handle Displaying Cooldown
+        SetDelayTime(0);
+        SetDelayTime(1);
+        SetDelayTime(2);
+        SetDelayTime(3);
+
+        //Handle Displaying LowManaText
+        if (player.GetComponent<PlayerAttack>().CanCastSpell() == true) {
+            lowManaText.SetActive(false);
+        }
+
+        else lowManaText.SetActive(true);
     }
 
     private void SetSpell(Image spells) {
@@ -140,6 +160,14 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
 
         isPausing = false;
+    }
+
+    private void SetDelayTime(int index) {
+        spellCDs[index].text = player.GetComponent<SpellCooldown>().currDelay[index].ToString("0.0") + "s"; 
+
+        if(player.GetComponent<SpellCooldown>().currDelay[index] <= 0) {
+            spellCDs[index].text = "Ready";
+        }
     }
     #endregion
 }

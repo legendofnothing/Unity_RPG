@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//This scripts hold values and pass back to PlayerAttack class
 public class SpellManager : MonoBehaviour
 {
     [SerializeField] private GameObject _player;

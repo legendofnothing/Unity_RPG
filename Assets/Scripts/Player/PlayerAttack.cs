@@ -21,9 +21,12 @@ public class PlayerAttack : MonoBehaviour {
 
     //Animation
     private Animator _anim;
+    private SpellCooldown spellCD;
 
     private void Start() {
         _anim = GetComponent<Animator>();
+        spellCD = GetComponent<SpellCooldown>();
+
         ActivateSpell(0);
     }
 
@@ -31,16 +34,6 @@ public class PlayerAttack : MonoBehaviour {
         SwitchWeapon();
 
         AttackInput();
-
-        //Handle the delay
-        if (!_canAttack) {
-            currDelay -= Time.deltaTime;
-        }
-
-        if (currDelay <= 0f) {
-            _canAttack = true;
-            currDelay = -1f;
-        }
     }
 
     private void SwitchWeapon() {
@@ -67,13 +60,15 @@ public class PlayerAttack : MonoBehaviour {
 
     private void AttackInput() {
 
-        if (Input.GetMouseButtonDown(0) && _canAttack && PlayerManager.instance.currPlayerMN > 0 && CanCastSpell()) {
-            currDelay = attackDelay;
-            _canAttack = false;
+        if (Input.GetMouseButtonDown(0) && PlayerManager.instance.currPlayerMN > 0 && CanCastSpell()) {
+            if (spellCD.canShoot[_weaponIndex]) {
+                spellCD.canShoot[_weaponIndex] = false;
+                spellCD.currDelay[_weaponIndex] = spellCD.maxDelay[_weaponIndex];
 
-            _anim.SetTrigger("Attack");
+                _anim.SetTrigger("Attack");
 
-            PlayerManager.instance.ReduceMana(projectileManaCost);
+                PlayerManager.instance.ReduceMana(projectileManaCost);
+            }
         }
     }
 
@@ -82,7 +77,7 @@ public class PlayerAttack : MonoBehaviour {
         spellInstance.GetComponent<Rigidbody2D>().velocity = attackPoint.transform.right * projectileSpeed;
     }
 
-    private bool CanCastSpell() {
+    public bool CanCastSpell() {
         if (PlayerManager.instance.currPlayerMN - projectileManaCost <= 0) {
             return false;
         }

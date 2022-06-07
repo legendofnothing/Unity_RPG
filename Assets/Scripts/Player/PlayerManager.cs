@@ -78,7 +78,7 @@ public class PlayerManager : MonoBehaviour
     private IEnumerator GeneratingMana() {
         while (true) {
             if (currPlayerMN < maxPlayerMN) {
-                currPlayerMN += 2.8f;
+                currPlayerMN += 3.8f;
                 yield return new WaitForSeconds(1f);
             }
 

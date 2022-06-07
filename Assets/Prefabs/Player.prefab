@@ -48,6 +48,8 @@ MonoBehaviour:
   _projectileSpeed: 8
   _projectileManaCost: 14
   _projectileDamage: 12
+  attackCooldown: 0
+  canAttack: 0
 --- !u!1 &526582165811147246
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +93,7 @@ GameObject:
   - component: {fileID: 526582166501781425}
   - component: {fileID: 526582166501781427}
   - component: {fileID: 526582166501781426}
+  - component: {fileID: 3119364323351993456}
   - component: {fileID: 526582166501781430}
   - component: {fileID: 526582166501781431}
   - component: {fileID: 526582166501781424}
@@ -234,6 +237,22 @@ MonoBehaviour:
   attackDelay: 1.2
   currDelay: 0
   attackPoint: {fileID: 526582165811147246}
+--- !u!114 &3119364323351993456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526582166501781434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7e2e47e7f628140bee6fa07466a2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireSpellCD: 1.4
+  waterSpellCD: 2.4
+  iceSpellCD: 1.2
+  thunderSpellCD: 0.3
 --- !u!61 &526582166501781430
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -348,6 +367,8 @@ MonoBehaviour:
   _projectileSpeed: 2
   _projectileManaCost: 27
   _projectileDamage: 25
+  attackCooldown: 0
+  canAttack: 0
 --- !u!1 &2987736044735253084
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +417,8 @@ MonoBehaviour:
   _projectileSpeed: 5
   _projectileManaCost: 12
   _projectileDamage: 10
+  attackCooldown: 0
+  canAttack: 0
 --- !u!1 &7807204015717701086
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +467,8 @@ MonoBehaviour:
   _projectileSpeed: 12
   _projectileManaCost: 6
   _projectileDamage: 8
+  attackCooldown: 0
+  canAttack: 0
 --- !u!1 &8253587662357000502
 GameObject:
   m_ObjectHideFlags: 0
