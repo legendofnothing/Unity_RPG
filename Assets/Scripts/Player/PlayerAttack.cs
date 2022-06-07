@@ -4,25 +4,14 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour {
     [HideInInspector] public int _weaponIndex;
+    [HideInInspector] public GameObject spellToCast;
 
-    [Header("Spells Configs")]
-    public GameObject fire;
-    public GameObject water;
-    public GameObject ice;
-    public GameObject thunder;
+    [HideInInspector] public float projectileSpeed;
+    [HideInInspector] public float projectileManaCost;
+    [HideInInspector] public float projectileDamage;
 
-    [Header("Attack Config")]
-    public float fireSpeed;
-    public float waterSpeed;
-    public float iceSpeed;
-    public float thunderSpeed;
+    public GameObject[] Spells;
 
-    [Space]
-    public float fireMana;
-    public float waterMana;
-    public float iceMana;
-    public float thunderMana;
-    
     [Space]
     //Internal Configs
     private bool _canAttack;
@@ -35,6 +24,7 @@ public class PlayerAttack : MonoBehaviour {
 
     private void Start() {
         _anim = GetComponent<Animator>();
+        ActivateSpell(0);
     }
 
     private void Update() {
@@ -56,18 +46,22 @@ public class PlayerAttack : MonoBehaviour {
     private void SwitchWeapon() {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             _weaponIndex = 0;
+            ActivateSpell(_weaponIndex);
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha2)) {
             _weaponIndex = 1;
+            ActivateSpell(_weaponIndex);
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha3)) {
             _weaponIndex = 2;
+            ActivateSpell(_weaponIndex);
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha4)) {
             _weaponIndex = 3;
+            ActivateSpell(_weaponIndex);
         }
     }
 
@@ -79,70 +73,30 @@ public class PlayerAttack : MonoBehaviour {
 
             _anim.SetTrigger("Attack");
 
-            switch (_weaponIndex) {
-                case 0:
-                    PlayerManager.instance.ReduceMana(fireMana);
-                    break;
-                case 1:
-                    PlayerManager.instance.ReduceMana(waterMana);
-                    break;
-                case 2:
-                    PlayerManager.instance.ReduceMana(iceMana);
-                    break;
-                case 3:
-                    PlayerManager.instance.ReduceMana(thunderMana);
-                    break;  
-            }
+            PlayerManager.instance.ReduceMana(projectileManaCost);
         }
     }
 
     public void CastSpell() {
-        GameObject spelltocast = null;
-        var projectileSpeed = 0f;
-
-        switch (_weaponIndex) {
-            case 0:
-                spelltocast = fire;
-                projectileSpeed = fireSpeed;
-                break;
-
-            case 1:
-                spelltocast = water;
-                projectileSpeed = waterSpeed;
-                break;
-
-            case 2:
-                spelltocast = ice;
-                projectileSpeed = iceSpeed;
-                break;
-            
-            case 3:
-                spelltocast = thunder;
-                projectileSpeed = thunderSpeed;
-                break;
-        }
-
-        GameObject spellInstance = Instantiate(spelltocast, attackPoint.transform.position, attackPoint.transform.rotation);
+        GameObject spellInstance = Instantiate(spellToCast, attackPoint.transform.position, attackPoint.transform.rotation);
         spellInstance.GetComponent<Rigidbody2D>().velocity = attackPoint.transform.right * projectileSpeed;
     }
 
     private bool CanCastSpell() {
-        if (PlayerManager.instance.currPlayerMN - fireMana <= 0) {
-            return false;
-        }
-
-        else if (PlayerManager.instance.currPlayerMN - iceMana <= 0) {
-            return false;
-        }
-
-        else if (PlayerManager.instance.currPlayerMN - waterMana <= 0) {
-            return false;
-        }
-
-        else if (PlayerManager.instance.currPlayerMN - thunderMana <= 0) {
+        if (PlayerManager.instance.currPlayerMN - projectileManaCost <= 0) {
             return false;
         }
 
         else return true;
+    }
+
+    private void ActivateSpell(int index) {
+        for(int i = 0; i < Spells.Length; i++) {
+            if (Spells[index] == Spells[i]) {
+                Spells[i].SetActive(true);
+            }
+
+            else Spells[i].SetActive(false);    
+        }
     }
 }

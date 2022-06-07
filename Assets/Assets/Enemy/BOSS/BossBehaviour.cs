@@ -93,10 +93,6 @@ public class BossBehaviour : MonoBehaviour
             StartCoroutine(Heal());
             _canHeal = false;
         }
-
-        if (!_canHeal) {
-            StartCoroutine(HealDelay());
-        }
     }
 
     IEnumerator Heal() {
@@ -108,12 +104,6 @@ public class BossBehaviour : MonoBehaviour
         yield return new WaitForSeconds(2.4f);
 
         _isHealing = false;
-    }
-
-    IEnumerator HealDelay() {
-        yield return new WaitForSeconds(8.8f);
-
-        _canHeal = true;
     }
 
     IEnumerator Die() {

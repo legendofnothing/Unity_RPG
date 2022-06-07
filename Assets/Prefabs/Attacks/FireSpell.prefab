@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 8677943487432353604}
   - component: {fileID: 6854455168067308758}
   - component: {fileID: 5039940899967434187}
-  - component: {fileID: 5277612090857614619}
-  - component: {fileID: 2755170235768135254}
   - component: {fileID: 8223860970368854542}
+  - component: {fileID: -557387206119405039}
   m_Layer: 7
   m_Name: FireSpell
   m_TagString: Spells
@@ -134,32 +133,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.63777214}
   m_EdgeRadius: 0
---- !u!114 &5277612090857614619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2421114835189783827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14cbb17dfc4ee99429bb6732725daf1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponIndex: 0
---- !u!114 &2755170235768135254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2421114835189783827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39101e2b6a8fd1347bb02f635fcfada9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 15
 --- !u!95 &8223860970368854542
 Animator:
   serializedVersion: 3
@@ -179,3 +152,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-557387206119405039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2421114835189783827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b31e45a8d798cb4f899771509213c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponIndex: 0

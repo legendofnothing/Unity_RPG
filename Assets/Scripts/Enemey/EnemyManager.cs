@@ -21,6 +21,8 @@ public class EnemyManager : MonoBehaviour
     //Variable that make stuff play once
     private bool _isDone;
 
+    private bool _hasDied;
+
     private void Start() {
         currEnemyHP = _maxEnemyHP;
         _anime = this.GetComponent<Animator>();
@@ -59,6 +61,8 @@ public class EnemyManager : MonoBehaviour
             currEnemyHP = 0;
             canPatrol = false;
 
+            _hasDied = true;
+
             if (!_isDone) {
                 _anime.SetTrigger("isDie");
                 _isDone = true;
@@ -79,7 +83,7 @@ public class EnemyManager : MonoBehaviour
 
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Player")) {
+        if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Player") && !_hasDied) {
             PlayerManager.instance.TakeDamage(10f);
         }
     }
