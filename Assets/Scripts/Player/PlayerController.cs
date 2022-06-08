@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
             _player.AddForce(transform.up * _jumpPower, ForceMode2D.Impulse);
 
             PlayerManager.instance.ReduceMana(3f);
+
+            AudioManager.manager.PlaySFX("PlayerJump");
         }
 
         //Handle Dashing
@@ -58,6 +60,8 @@ public class PlayerController : MonoBehaviour
             }
 
             PlayerManager.instance.ReduceMana(5f);
+
+            AudioManager.manager.PlaySFX("PlayerDash");
         }
 
         //Handle Consumables
@@ -65,12 +69,16 @@ public class PlayerController : MonoBehaviour
             PlayerManager.instance.currPlayerHP += _hpFill;
 
             PlayerManager.instance.pickupHP -= 1;
+
+            AudioManager.manager.PlaySFX("PlayerHPRegen");
         }
 
         if (Input.GetKeyDown(KeyCode.X) && PlayerManager.instance.pickupMN > 0 && PlayerManager.instance.currPlayerMN < PlayerManager.instance.maxPlayerMN) {
             PlayerManager.instance.currPlayerMN += _mnFill;
 
             PlayerManager.instance.pickupMN -= 1;
+
+            AudioManager.manager.PlaySFX("PlayerMNRegen");
         }
     }
 

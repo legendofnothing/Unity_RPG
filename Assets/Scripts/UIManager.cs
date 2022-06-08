@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject playUI;
     public GameObject deathUI;
     public GameObject pauseUI;
+    public GameObject winUI;
 
     #region PlayUI
 
@@ -51,12 +52,18 @@ public class UIManager : MonoBehaviour
     [Space]
     public GameObject lowManaText;
 
+    [Space]
+    public AnimationClip backgroundAppearWin;
+    public Text winText;
+    public GameObject[] winButtons;
+
     private void Start() {
         spellList = new List<Image> { fireSpell, waterSpell, iceSpell, thunderSpell };
         Time.timeScale = 1;
 
         deathUI.SetActive(false);
         pauseUI.SetActive(false);
+        winUI.SetActive(false);
     }
 
     private void Update() {
@@ -145,12 +152,16 @@ public class UIManager : MonoBehaviour
         deathUI.SetActive(true);
     }
 
+    public void NextLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void Retry() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Quit() {
-        //Do Code Here
+        SceneManager.LoadScene(0);
     }
 
     public void Continue() {
@@ -168,6 +179,31 @@ public class UIManager : MonoBehaviour
         if(player.GetComponent<SpellCooldown>().currDelay[index] <= 0) {
             spellCDs[index].text = "Ready";
         }
+    }
+
+    public void StartWin() {
+        StartCoroutine(StartWinUI());
+    }
+
+    IEnumerator StartWinUI() {
+        winUI.SetActive(true);
+        playUI.SetActive(false);
+
+        winButtons[0].SetActive(false);
+        winButtons[1].SetActive(false);
+
+        winText.text = "";
+        yield return new WaitForSeconds(backgroundAppearWin.length + 0.35f);
+
+        winText.text = "LEVEL COMPLETED";
+
+        yield return new WaitForSeconds(0.35f);
+
+        winButtons[0].SetActive(true);
+
+        yield return new WaitForSeconds(0.35f);
+
+        winButtons[1].SetActive(true);
     }
     #endregion
 }

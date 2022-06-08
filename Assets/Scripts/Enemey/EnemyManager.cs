@@ -66,6 +66,7 @@ public class EnemyManager : MonoBehaviour
             if (!_isDone) {
                 _anime.SetTrigger("isDie");
                 _isDone = true;
+                AudioManager.manager.PlaySFX("EnemyDie");
             }
         }
 
@@ -79,6 +80,7 @@ public class EnemyManager : MonoBehaviour
         }
 
         _anime.SetTrigger("isBeingHit");
+        AudioManager.manager.PlaySFX("EnemyHit");
     }
 
 

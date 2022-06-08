@@ -64,6 +64,7 @@ public class PlayerManager : MonoBehaviour
 
 
             if (!_isDone) {
+                AudioManager.manager.PlaySFX("PlayerDie");
                 _anim.SetTrigger("Die");
                 _isDone = true;
             }
@@ -97,5 +98,6 @@ public class PlayerManager : MonoBehaviour
         currPlayerHP -= dmg;
 
         _anim.SetTrigger("TakeDamage");
+        AudioManager.manager.PlaySFX("PlayerHurt");
     }
 }

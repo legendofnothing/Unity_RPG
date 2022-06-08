@@ -66,6 +66,8 @@ public class BossBehaviour : MonoBehaviour
             var damage = Random.Range(10, 15);
 
             _currHP -= damage;
+
+            AudioManager.manager.PlaySFX("BossHit");
         }
     }
 
@@ -109,6 +111,8 @@ public class BossBehaviour : MonoBehaviour
     IEnumerator Die() {
         damageIndicator.text = "";
 
+        AudioManager.manager.PlaySFX("BossDie");
+
         anim.SetTrigger("Die");
         var clip = anim.runtimeAnimatorController.animationClips[1];
 
@@ -120,5 +124,7 @@ public class BossBehaviour : MonoBehaviour
         for(int i = 0; i < Doors.Length; i++) {
             Doors[i].SetActive(false);
         }
+
+        Destroy(gameObject);
     }
 }

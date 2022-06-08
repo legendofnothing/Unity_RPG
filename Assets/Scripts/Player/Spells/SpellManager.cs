@@ -12,11 +12,13 @@ public class SpellManager : MonoBehaviour
     [SerializeField] private float _projectileSpeed;
     [SerializeField] private float _projectileManaCost;
     [SerializeField] private float _projectileDamage;
+    [SerializeField] private string _sfxName;
 
     private void Update() {
         _player.GetComponent<PlayerAttack>().spellToCast = _spellCasting;
         _player.GetComponent<PlayerAttack>().projectileSpeed = _projectileSpeed;
         _player.GetComponent<PlayerAttack>().projectileManaCost = _projectileManaCost;
         _player.GetComponent<PlayerAttack>().projectileDamage = _projectileDamage;
+        _player.GetComponent<PlayerAttack>().sfxName = _sfxName;
     }
 }

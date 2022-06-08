@@ -9,6 +9,7 @@ public class PlayerAttack : MonoBehaviour {
     [HideInInspector] public float projectileSpeed;
     [HideInInspector] public float projectileManaCost;
     [HideInInspector] public float projectileDamage;
+    [HideInInspector] public string sfxName;
 
     public GameObject[] Spells;
 
@@ -68,6 +69,8 @@ public class PlayerAttack : MonoBehaviour {
                 _anim.SetTrigger("Attack");
 
                 PlayerManager.instance.ReduceMana(projectileManaCost);
+
+                AudioManager.manager.PlaySFX(sfxName);
             }
         }
     }
