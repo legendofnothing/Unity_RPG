@@ -57,6 +57,10 @@ public class UIManager : MonoBehaviour
     public Text winText;
     public GameObject[] winButtons;
 
+    [Space]
+    public GameObject BackgroundAudio;
+    public AudioClip winTheme;
+
     private void Start() {
         spellList = new List<Image> { fireSpell, waterSpell, iceSpell, thunderSpell };
         Time.timeScale = 1;
@@ -64,6 +68,8 @@ public class UIManager : MonoBehaviour
         deathUI.SetActive(false);
         pauseUI.SetActive(false);
         winUI.SetActive(false);
+
+        BackgroundAudio.GetComponent<AudioSource>().PlayDelayed(0.6f);
     }
 
     private void Update() {
@@ -99,6 +105,7 @@ public class UIManager : MonoBehaviour
         if(PlayerManager.instance.currPlayerHP <= 0) {
             playUI.SetActive(false);
             deathUI.SetActive(true);
+            BackgroundAudio.SetActive(false);
         }
 
         //Handle Pausing
@@ -112,6 +119,8 @@ public class UIManager : MonoBehaviour
 
             var hintIndex = Random.Range(0, hints.Length);
             hintText.text = hints[hintIndex];
+
+            BackgroundAudio.GetComponent<AudioSource>().Pause();
         }
 
         else if (Input.GetKeyDown(KeyCode.Escape) && isPausing) {
@@ -121,6 +130,8 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 1;
 
             isPausing = false;
+
+            BackgroundAudio.GetComponent<AudioSource>().UnPause();
         }
 
         //Handle Displaying Cooldown
@@ -171,6 +182,8 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
 
         isPausing = false;
+
+        BackgroundAudio.GetComponent<AudioSource>().UnPause();
     }
 
     public void Pause() {
@@ -180,6 +193,8 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0;
 
         isPausing = true;
+
+        BackgroundAudio.GetComponent<AudioSource>().Pause();
     }
 
     private void SetDelayTime(int index) {
@@ -200,6 +215,9 @@ public class UIManager : MonoBehaviour
 
         winButtons[0].SetActive(false);
         winButtons[1].SetActive(false);
+
+        BackgroundAudio.GetComponent<AudioSource>().clip = winTheme;
+        BackgroundAudio.GetComponent<AudioSource>().PlayDelayed(0.2f);
 
         winText.text = "";
         yield return new WaitForSeconds(backgroundAppearWin.length + 0.35f);

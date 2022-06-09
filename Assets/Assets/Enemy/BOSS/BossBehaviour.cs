@@ -17,6 +17,9 @@ public class BossBehaviour : MonoBehaviour
 
     private Animator anim;
 
+    public GameObject BackgroundAudio;
+    public AudioClip Level2;
+
     [Header("Boss Configs")]
     public float speed;
     public float maxHP;
@@ -28,6 +31,7 @@ public class BossBehaviour : MonoBehaviour
     private void Start() {
         _currHP = maxHP;
         anim = GetComponent<Animator>();
+
     }
 
     private void Update() {
@@ -113,6 +117,8 @@ public class BossBehaviour : MonoBehaviour
 
         AudioManager.manager.PlaySFX("BossDie");
 
+        BackgroundAudio.GetComponent<AudioSource>().Pause();
+
         anim.SetTrigger("Die");
         var clip = anim.runtimeAnimatorController.animationClips[1];
 
@@ -124,6 +130,9 @@ public class BossBehaviour : MonoBehaviour
         for(int i = 0; i < Doors.Length; i++) {
             Doors[i].SetActive(false);
         }
+
+        BackgroundAudio.GetComponent<AudioSource>().clip = Level2;
+        BackgroundAudio.GetComponent<AudioSource>().Play();
 
         Destroy(gameObject);
     }

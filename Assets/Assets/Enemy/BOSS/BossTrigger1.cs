@@ -7,6 +7,10 @@ public class BossTrigger1 : MonoBehaviour
     public GameObject[] Doors;
     public GameObject Boss;
 
+    public GameObject BackgroundAudio;
+    public AudioClip bossTheme;
+    public AudioClip bossScream;
+
     private void Start() {
         for(int i = 0; i < Doors.Length; i++) {
             Doors[i].SetActive(false);
@@ -21,9 +25,24 @@ public class BossTrigger1 : MonoBehaviour
                 Doors[i].SetActive(true);
             }
 
-            Boss.SetActive(true);
-
-            Destroy(gameObject);
+            StartCoroutine(StartBoss());
         }
+    }
+
+    IEnumerator StartBoss() {
+        Boss.SetActive(true);
+        Boss.GetComponent<BossBehaviour>().enabled = false;
+
+        BackgroundAudio.GetComponent<AudioSource>().clip = bossScream;
+        BackgroundAudio.GetComponent<AudioSource>().Play();
+
+        yield return new WaitForSeconds(bossScream.length);
+
+        BackgroundAudio.GetComponent<AudioSource>().clip = bossTheme;
+        BackgroundAudio.GetComponent<AudioSource>().Play();
+
+        Boss.GetComponent<BossBehaviour>().enabled = true;
+
+        Destroy(gameObject);
     }
 }
