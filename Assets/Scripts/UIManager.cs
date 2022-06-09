@@ -173,6 +173,15 @@ public class UIManager : MonoBehaviour
         isPausing = false;
     }
 
+    public void Pause() {
+        playUI.SetActive(false);
+        pauseUI.SetActive(true);
+
+        Time.timeScale = 0;
+
+        isPausing = true;
+    }
+
     private void SetDelayTime(int index) {
         spellCDs[index].text = player.GetComponent<SpellCooldown>().currDelay[index].ToString("0.0") + "s"; 
 

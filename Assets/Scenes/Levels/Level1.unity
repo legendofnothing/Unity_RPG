@@ -37906,7 +37906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5.4
-  maxHP: 1
+  maxHP: 220
   chargeAttackDelay: 1.5
   damageIndicator: {fileID: 587531573}
   Doors:
